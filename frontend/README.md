@@ -23,7 +23,9 @@ O projeto conta com uma estrutura de **15 componentes**, cada um acompanhado por
 ## Cobertura de testes
 Foi gerado de forma automática através do comando: `npm run test:coverage` até o momento da publicação deste projeto e o arquivo para visualização encontra-se na pasta `coverage/Icov-report/src/index.html`
 
-[Clique aqui para visualizar o arquivo.](https://github.com/rodrigosarri/TechnicalChallengeNews/blob/main/frontend/coverage/Icov-report/src/index.html)
+[Clique aqui para acessar o arquivo.](https://github.com/rodrigosarri/TechnicalChallengeNews/blob/main/frontend/coverage/lcov-report/index.html)
+
+![coverage](https://github.com/rodrigosarri/TechnicalChallengeNews/blob/main/frontend/technical_challenge_news_coverage.png)
 
 ## Imagens do projeto
 
