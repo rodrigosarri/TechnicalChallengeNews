@@ -1,0 +1,550 @@
+{
+	"info": {
+		"_postman_id": "a1552b6d-fb05-4380-afaa-3f48dcba448c",
+		"name": "NewsFlow API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9202301"
+	},
+	"item": [
+		{
+			"name": "/api/menu",
+			"item": [
+				{
+					"name": "/api/menu",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}api/menu",
+							"host": [
+								"{{baseUrl}}api"
+							],
+							"path": [
+								"menu"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/menu",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}api/menu",
+							"host": [
+								"{{baseUrl}}api"
+							],
+							"path": [
+								"menu"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/menu",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}api/menu",
+							"host": [
+								"{{baseUrl}}api"
+							],
+							"path": [
+								"menu"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/menu",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}api/menu",
+							"host": [
+								"{{baseUrl}}api"
+							],
+							"path": [
+								"menu"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "/api/news-author",
+			"item": [
+				{
+					"name": "/api/news-author",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}api/news-author",
+							"host": [
+								"{{baseUrl}}api"
+							],
+							"path": [
+								"news-author"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/news-author",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}api/news-author",
+							"host": [
+								"{{baseUrl}}api"
+							],
+							"path": [
+								"news-author"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/news-author",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}api/news-author",
+							"host": [
+								"{{baseUrl}}api"
+							],
+							"path": [
+								"news-author"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/news-author",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}api/news-author",
+							"host": [
+								"{{baseUrl}}api"
+							],
+							"path": [
+								"news-author"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "/api/news-category",
+			"item": [
+				{
+					"name": "/api/news-category",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}api/news-category",
+							"host": [
+								"{{baseUrl}}api"
+							],
+							"path": [
+								"news-category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/news-category",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}api/news-category",
+							"host": [
+								"{{baseUrl}}api"
+							],
+							"path": [
+								"news-category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/news-category",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}api/news-category",
+							"host": [
+								"{{baseUrl}}api"
+							],
+							"path": [
+								"news-category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/news-category",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}api/news-author",
+							"host": [
+								"{{baseUrl}}api"
+							],
+							"path": [
+								"news-author"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "/api/news-metadata",
+			"item": [
+				{
+					"name": "/api/news-metadata",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}api/news-metadata",
+							"host": [
+								"{{baseUrl}}api"
+							],
+							"path": [
+								"news-metadata"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/news-metadata/increment-view",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}api/news-metadata/increment-view",
+							"host": [
+								"{{baseUrl}}api"
+							],
+							"path": [
+								"news-metadata",
+								"increment-view"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/news-metadata/increment-share",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}api/news-metadata/increment-share",
+							"host": [
+								"{{baseUrl}}api"
+							],
+							"path": [
+								"news-metadata",
+								"increment-share"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/news-metadata",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}api/news-metadata",
+							"host": [
+								"{{baseUrl}}api"
+							],
+							"path": [
+								"news-metadata"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "/api/news",
+			"item": [
+				{
+					"name": "/api/news",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}api/news",
+							"host": [
+								"{{baseUrl}}api"
+							],
+							"path": [
+								"news"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/news",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}api/news",
+							"host": [
+								"{{baseUrl}}api"
+							],
+							"path": [
+								"news"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/news",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}api/news",
+							"host": [
+								"{{baseUrl}}api"
+							],
+							"path": [
+								"news"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/news",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}api/news",
+							"host": [
+								"{{baseUrl}}api"
+							],
+							"path": [
+								"news"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "/api/resource-link",
+			"item": [
+				{
+					"name": "/api/resource-link",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}api/resource-link",
+							"host": [
+								"{{baseUrl}}api"
+							],
+							"path": [
+								"resource-link"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/resource-link",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}api/resource-link",
+							"host": [
+								"{{baseUrl}}api"
+							],
+							"path": [
+								"resource-link"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/resource-link",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}api/resource-link",
+							"host": [
+								"{{baseUrl}}api"
+							],
+							"path": [
+								"resource-link"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/resource-link",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}api/resource-link",
+							"host": [
+								"{{baseUrl}}api"
+							],
+							"path": [
+								"resource-link"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "/api/social-media",
+			"item": [
+				{
+					"name": "/api/social-media",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}api/social-media",
+							"host": [
+								"{{baseUrl}}api"
+							],
+							"path": [
+								"social-media"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/social-media",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}api/social-media",
+							"host": [
+								"{{baseUrl}}api"
+							],
+							"path": [
+								"social-media"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/social-media",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}api/social-media",
+							"host": [
+								"{{baseUrl}}api"
+							],
+							"path": [
+								"social-media"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/social-media",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}api/social-media",
+							"host": [
+								"{{baseUrl}}api"
+							],
+							"path": [
+								"social-media"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:3001/",
+			"type": "string"
+		}
+	]
+}

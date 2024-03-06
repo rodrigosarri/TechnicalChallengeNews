@@ -1,0 +1,49 @@
+{
+  "name": "node-server",
+  "version": "1.0.0",
+  "description": "Node.js Server with Express and TypeScript",
+  "main": "dist/index.js",
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "develop": "SET NODE_ENV=development & nodemon src/index.ts",
+    "developLinux": "NODE_ENV=development nodemon src/index.ts",
+    "homologWindows": "copy .env .\\dist & SET NODE_ENV=homologelopment & node dist/index.js",
+    "homologLinux": "cp .env ./dist/.env && NODE_ENV=development node dist/index.js"
+  },
+  "imports": {
+    "#controllers/*.ts": "./src/controllers/*.ts",
+    "#database/*.ts": "./src/controllers/*.ts",
+    "#migration/*.ts": "./src/migration/*.ts",
+    "#model/*.ts": "./src/model/*.ts",
+    "#routes/*.ts": "./src/routes/*.ts",
+    "#utils/*.ts": "./src/utils/*.ts"
+  },
+  "dependencies": {
+    "@types/validator": "^13.11.5",
+    "async-retry": "latest",
+    "cors": "^2.8.5",
+    "express": "latest",
+    "mysql2": "latest",
+    "pg": "latest",
+    "reflect-metadata": "^0.1.13",
+    "sequelize": "latest",
+    "sequelize-typescript": "^2.1.5",
+    "umzug": "^3.3.1"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^8.4.1",
+    "@types/async-retry": "latest",
+    "@types/cors": "^2.8.17",
+    "@types/express": "latest",
+    "@types/node": "^20.8.9",
+    "@types/sequelize": "^4.28.17",
+    "dotenv": "^16.3.1",
+    "nodemon": "^3.1.0",
+    "rimraf": "latest",
+    "sequelize-cli": "^6.6.1",
+    "ts-node": "latest",
+    "typescript": "latest"
+  }
+}

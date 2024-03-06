@@ -1,0 +1,9 @@
+{
+  "jest": {
+    "collectCoverage": true,
+    "coverageReporters": [
+      "json",
+      "html"
+    ]
+  }
+}

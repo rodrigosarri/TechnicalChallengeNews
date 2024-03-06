@@ -1,0 +1,32 @@
+{
+    "parser": "@typescript-eslint/parser",
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:import/errors",
+      "plugin:import/warnings",
+      "plugin:import/typescript"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 2018,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": true
+      }
+    },
+    "rules": {
+      "quotes": ["error", "double"],
+      "semi": ["error", "always"],
+      "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
+      "import/no-unused-modules": [1, {"unusedExports": true}],
+      "import/no-named-as-default": "off"
+    },
+    "settings": {
+      "import/resolver": {
+        "typescript": {}
+      },
+      "react": {
+        "version": "detect"
+      }
+    }
+  }

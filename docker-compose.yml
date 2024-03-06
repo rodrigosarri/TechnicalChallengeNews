@@ -1,0 +1,47 @@
+version: "3.8"
+services:
+   db:
+     image: mysql:8.0
+     command: --default-authentication-plugin=mysql_native_password
+     restart: always
+     environment:
+       MYSQL_ROOT_PASSWORD: 9rIB2C3fVw4m
+       MYSQL_DATABASE: challenge
+     volumes:
+       - ./database/mysql/data:/var/lib/mysql
+       - ./database/mysql/init:/docker-entrypoint-initdb.d
+     ports:
+       - "3307:3306"
+     networks:
+       - localstack-network
+
+   app:
+     depends_on:
+       - db
+     build:
+       context: ./api/nodejs
+     env_file:
+       - ./api/nodejs/.env
+     ports:
+       - "3001:3001"
+     environment:
+       API_HOTS: localhost
+       API_PORT: 3001
+       DB_HOST: db
+       DB_USER: app_user
+       DB_NAME: challenge
+       DB_PASS: app_password
+       DB_DIALECT: mysql
+     networks:
+       - localstack-network
+
+   frontend:
+     build: ./frontend
+     ports:
+       - "80:80"
+     networks:
+       - localstack-network
+
+networks:
+   localstack-network:
+     driver: bridge

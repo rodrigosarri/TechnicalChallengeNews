@@ -1,0 +1,64 @@
+# Dependency directories
+node_modules/
+.pnp
+.pnp.js
+
+# Build outputs
+/build
+/dist
+/out
+
+# Misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# IDE - IntelliJ
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# IDE - WebStorm
+.idea/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+.directory
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# dotenv environment variables file
+.env
+.env.test
+.env*.local

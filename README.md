@@ -1,0 +1,366 @@
+# Teste de Desenvolvimento Web
+
+## Objetivo do Teste
+
+Este teste visa avaliar as habilidades em desenvolvimento web, integração de tecnologias e conhecimento nas tecnologias mencionadas. O desafio é criar um Sistema de Gerenciamento de Notícias.
+
+### Tecnologias a serem utilizadas
+- **Frontend:** Utilize React.js para criar o front-end.
+- **Backend:** Use Node.js com Express para criar um servidor.
+- **Banco de dados:** Configure um banco de dados (ex: MongoDB, MySQL) para armazenar as notícias.
+- **Docker:** Configure um arquivo docker-compose para orquestrar a execução dos containers Docker da aplicação.
+
+#### 1. Front-end
+No desenvolvimento do frontend, foi utilizado Arquitetura Baseada em Componentes, alinhada aos princípios do Atomic Design. Esse modelo permitiu a criação de 15 componentes distintos e 4 páginas, garantindo uma exibição completa e eficaz das informações requisitadas.
+
+#### 2. Back-end
+No desenvolvimento do backend, optou-se pela adoção da estrutura MVC, combinada com a utilização da biblioteca Sequelize como ORM. Este projeto também foi pautado pelos princípios SOLID e pelas práticas de código limpo, o que envolveu a atribuição clara de responsabilidades a cada elemento do sistema e a implementação de funções dedicadas à captura de erros, visando assim maximizar a organização e a manutenibilidade do código.
+
+#### 3. Banco de Dados
+Para o banco de dados, o MySQL foi escolhido para o desenvolvimento do projeto, priorizando um design estruturado dos itens e uma tipagem precisa conforme as necessidades do sistema. Com o objetivo de reforçar a segurança e promover uma maior interoperabilidade foi utilizado o formato de UUIDs em detrimento de IDs tradicionais para chaves de tabela.
+
+#### 4. Dockerização
+No contexto do Docker, além da utilização do Docker Compose, foram desenvolvidos contêineres específicos para cada componente do projeto: banco de dados, backend e frontend. Para assegurar a correta implementação e funcionamento desses componentes, um arquivo README acompanha cada um, detalhando as instruções e passos necessários para sua operação efetiva.
+
+### Executando o projeto
+Para rodar o projeto utilizando Docker, é essencial primeiramente garantir que o Docker esteja devidamente instalado no seu sistema. Navegue até o diretório raiz do projeto e execute o seguinte comando: `docker-compose up`. Este passo inicializará todos os serviços definidos no arquivo docker-compose.yml, permitindo que o projeto seja executado dentro de containers Docker de forma integrada.
+
+Para executar os componentes de forma individualizada, é necessário acessar cada diretório correspondente e seguir as instruções detalhadas nos arquivos README localizados em cada pasta. Estes documentos contêm comandos específicos e passo a passo dedicados para a configuração e inicialização correta de cada parte do projeto, garantindo que cada componente seja executado conforme esperado.
+
+### Estrutura geral de arquivos
+```plaintext
+.gitignore
+docker-compose.yml
+README.md
+api/
+    NewsFlow API.postman_collection.json
+    README.md
+    nodejs/
+        .env
+        .gitignore
+        Dockerfile
+        package-lock.json
+        package.json
+        README.md
+        tsconfig.json
+        src/
+            index.ts
+            controllers/
+                interface.ts
+                MenuController.ts
+                NewsAuthorController.ts
+                NewsCategoryController.ts
+                NewsController.ts
+                NewsMetadataController.ts
+                ResourceLinkController.ts
+                SocialMediaController.ts
+            database/
+                index.ts
+            migrations/
+                001-menuMigrations.ts
+                002-newsAuthorMigrations.ts
+                003-newsCategoryMigrations.ts
+                004-newsMigrations.ts
+                005-newsMetadataMigrations.ts
+                006-resourceLinkMigrations.ts
+                007-socialMediaMigrations.ts
+            models/
+                index.ts
+                interfaces.ts
+                Menu.ts
+                News.ts
+                NewsAuthor.ts
+                NewsCategory.ts
+                NewsMetadata.ts
+                ResourceLink.ts
+                SocialMedia.ts
+            routes/
+                index.ts
+                MenuRoutes.ts
+                NewsAuthorRoutes.ts
+                NewsCategoryRoutes.ts
+                NewsMetadataRoutes.ts
+                NewsRoutes.ts
+                ResourceLinkRoutes.ts
+                SocialMediaRoutes.ts
+            utils/
+                index.ts
+                interfaces.ts
+                wait-for-db.ts
+database/
+    README.md
+    mysql/
+        Dockerfile
+        README.md
+        init/
+            grants.sql
+frontend/
+    .env
+    .eslintrc.json
+    .gitignore
+    Dockerfile
+    jest.config.json
+    package-lock.json
+    package.json
+    README.md
+    technical_challenge_news_screen1.png
+    technical_challenge_news_screen2.png
+    technical_challenge_news_screen3.png
+    tsconfig.json
+    coverage/
+        clover.xml
+        coverage-final.json
+        lcov.info
+        lcov-report/
+            base.css
+            block-navigation.js
+            favicon.png
+            index.html
+            prettify.css
+            prettify.js
+            sort-arrow-sprite.png
+            sorter.js
+            src/
+                App.tsx.html
+                GlobalStyle.tsx.html
+                index.html
+                index.tsx.html
+                reportWebVitals.ts.html
+                components/
+                    index.html
+                    index.tsx.html
+                    Column/
+                        index.html
+                        index.tsx.html
+                        interface.tsx.html
+                        styled.tsx.html
+                    Header/
+                        index.html
+                        index.tsx.html
+                        styled.tsx.html
+                        Brand/
+                            index.html
+                            index.tsx.html
+                            styled.tsx.html
+                        Menu/
+                            index.html
+                            index.tsx.html
+                            interface.tsx.html
+                            styled.tsx.html
+                        SearchBar/
+                            index.html
+                            index.tsx.html
+                            styled.tsx.html
+                    Modal/
+                        index.html
+                        index.tsx.html
+                        interface.tsx.html
+                        styled.tsx.html
+                    Post/
+                        index.html
+                        index.tsx.html
+                        interface.tsx.html
+                        styled.tsx.html
+                        PostCategory/
+                            index.html
+                            index.tsx.html
+                            interface.tsx.html
+                            styled.tsx.html
+                        PostMeta/
+                            index.html
+                            index.tsx.html
+                            interface.tsx.html
+                            styled.tsx.html
+                        PostTitle/
+                            index.html
+                            index.tsx.html
+                            interface.tsx.html
+                            styled.tsx.html
+                    ResourceLinks/
+                        index.html
+                        index.tsx.html
+                        interface.tsx.html
+                        styled.tsx.html
+                    SectionGrid/
+                        index.html
+                        index.tsx.html
+                        interface.tsx.html
+                        styled.tsx.html
+                    SocialMedia/
+                        index.html
+                        index.tsx.html
+                        interface.tsx.html
+                        styled.tsx.html
+                    Spinner/
+                        index.html
+                        index.tsx.html
+                        interface.tsx.html
+                        styled.tsx.html
+                    Wrapper/
+                        index.html
+                        index.tsx.html
+                        interface.tsx.html
+                        styled.tsx.html
+                pages/
+                    index.html
+                    index.tsx.html
+                    Admin/
+                        index.html
+                        index.tsx.html
+                    Authors/
+                        index.html
+                        index.tsx.html
+                    Categories/
+                        index.html
+                        index.tsx.html
+                    Home/
+                        index.html
+                        index.tsx.html
+                    News/
+                        index.html
+                        index.tsx.html
+                        styled.tsx.html
+                redux/
+                    news/
+                        index.html
+                        interface.tsx.html
+                        slice.tsx.html
+                        store.tsx.html
+                services/
+                    api.tsx.html
+                    index.html
+                    index.tsx.html
+                    interface.tsx.html
+                    menuService.tsx.html
+                    newsAuthorService.tsx.html
+                    newsCategoryService.tsx.html
+                    newsMetadataService.tsx.html
+                    newsService.tsx.html
+                    resourceLinkService.tsx.html
+                    socialmediaService.tsx.html
+                utils/
+                    index.html
+                    index.tsx.html
+    public/
+        favicon.ico
+        index.html
+        logo192.png
+        logo512.png
+        manifest.json
+        robots.txt
+    src/
+        App.tsx
+        GlobalStyle.tsx
+        index.tsx
+        react-app-env.d.ts
+        reportWebVitals.ts
+        setupTests.ts
+        assets/
+            images/
+                estadao-brand.png
+        components/
+            index.tsx
+            Column/
+                Column.test.tsx
+                index.tsx
+                interface.tsx
+                styled.tsx
+            Header/
+                Header.test.tsx
+                index.tsx
+                styled.tsx
+                Brand/
+                    Brand.test.tsx
+                    index.tsx
+                    styled.tsx
+                Menu/
+                    index.tsx
+                    interface.tsx
+                    Menu.test.tsx
+                    styled.tsx
+                SearchBar/
+                    index.tsx
+                    SearchBar.test.tsx
+                    styled.tsx
+            Modal/
+                index.tsx
+                interface.tsx
+                Modal.test.tsx
+                styled.tsx
+            Post/
+                index.tsx
+                interface.tsx
+                Post.test.tsx
+                styled.tsx
+                PostCategory/
+                    index.tsx
+                    interface.tsx
+                    PostCategory.test.tsx
+                    styled.tsx
+                PostMeta/
+                    index.tsx
+                    interface.tsx
+                    PostMeta.test.tsx
+                    styled.tsx
+                PostTitle/
+                    index.tsx
+                    interface.tsx
+                    PostTitle.test.tsx
+                    styled.tsx
+            ResourceLinks/
+                index.tsx
+                interface.tsx
+                ResourceLinks.test.tsx
+                styled.tsx
+            SectionGrid/
+                index.tsx
+                interface.tsx
+                SectionGrid.test.tsx
+                styled.tsx
+            SocialMedia/
+                index.tsx
+                interface.tsx
+                SocialMedia.test.tsx
+                styled.tsx
+            Spinner/
+                index.tsx
+                interface.tsx
+                Spinner.test.tsx
+                styled.tsx
+            Wrapper/
+                index.tsx
+                interface.tsx
+                styled.tsx
+                Wrapper.test.tsx
+        pages/
+            index.tsx
+            Admin/
+                index.tsx
+            Authors/
+                index.tsx
+            Categories/
+                index.tsx
+            Home/
+                index.tsx
+            News/
+                index.tsx
+                styled.tsx
+        redux/
+            news/
+                interface.tsx
+                slice.tsx
+                store.tsx
+        services/
+            api.tsx
+            index.tsx
+            interface.tsx
+            menuService.tsx
+            newsAuthorService.tsx
+            newsCategoryService.tsx
+            newsMetadataService.tsx
+            newsService.tsx
+            resourceLinkService.tsx
+            socialmediaService.tsx
+        utils/
+            index.tsx
+```

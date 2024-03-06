@@ -1,0 +1,636 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1709693559360" clover="3.2.0">
+  <project timestamp="1709693559360" name="All files">
+    <metrics statements="348" coveredstatements="167" conditionals="133" coveredconditionals="62" methods="75" coveredmethods="46" elements="556" coveredelements="275" complexity="0" loc="348" ncloc="348" packages="26" files="68" classes="68"/>
+    <package name="src">
+      <metrics statements="14" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="3" coveredmethods="0"/>
+      <file name="App.tsx" path="D:\estadao-tech-challenge\frontend\src\App.tsx">
+        <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+      </file>
+      <file name="GlobalStyle.tsx" path="D:\estadao-tech-challenge\frontend\src\GlobalStyle.tsx">
+        <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="3" count="0" type="stmt"/>
+      </file>
+      <file name="index.tsx" path="D:\estadao-tech-challenge\frontend\src\index.tsx">
+        <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+      </file>
+      <file name="reportWebVitals.ts" path="D:\estadao-tech-challenge\frontend\src\reportWebVitals.ts">
+        <metrics statements="8" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="4" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="index.tsx" path="D:\estadao-tech-challenge\frontend\src\components\index.tsx">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="src.components.Column">
+      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="index.tsx" path="D:\estadao-tech-challenge\frontend\src\components\Column\index.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="6" count="5" type="stmt"/>
+        <line num="7" count="11" type="stmt"/>
+      </file>
+      <file name="interface.tsx" path="D:\estadao-tech-challenge\frontend\src\components\Column\interface.tsx">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="styled.tsx" path="D:\estadao-tech-challenge\frontend\src\components\Column\styled.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="4" count="5" type="stmt"/>
+        <line num="6" count="5" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.Header">
+      <metrics statements="25" coveredstatements="25" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="5"/>
+      <file name="index.tsx" path="D:\estadao-tech-challenge\frontend\src\components\Header\index.tsx">
+        <metrics statements="18" coveredstatements="18" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="5"/>
+        <line num="22" count="4" type="stmt"/>
+        <line num="23" count="2" type="stmt"/>
+        <line num="24" count="2" type="stmt"/>
+        <line num="25" count="2" type="stmt"/>
+        <line num="27" count="2" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
+        <line num="29" count="1" type="stmt"/>
+        <line num="32" count="2" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="37" count="2" type="stmt"/>
+        <line num="38" count="1" type="stmt"/>
+        <line num="39" count="1" type="stmt"/>
+        <line num="42" count="2" type="stmt"/>
+        <line num="43" count="1" type="stmt"/>
+        <line num="44" count="1" type="stmt"/>
+        <line num="45" count="1" type="stmt"/>
+        <line num="48" count="2" type="stmt"/>
+      </file>
+      <file name="styled.tsx" path="D:\estadao-tech-challenge\frontend\src\components\Header\styled.tsx">
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="4" count="4" type="stmt"/>
+        <line num="6" count="4" type="stmt"/>
+        <line num="11" count="4" type="stmt"/>
+        <line num="16" count="4" type="stmt"/>
+        <line num="27" count="4" type="stmt"/>
+        <line num="37" count="4" type="stmt"/>
+        <line num="48" count="4" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.Header.Brand">
+      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="index.tsx" path="D:\estadao-tech-challenge\frontend\src\components\Header\Brand\index.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="7" count="5" type="stmt"/>
+        <line num="8" count="6" type="stmt"/>
+      </file>
+      <file name="styled.tsx" path="D:\estadao-tech-challenge\frontend\src\components\Header\Brand\styled.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="4" count="5" type="stmt"/>
+        <line num="6" count="5" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.Header.Menu">
+      <metrics statements="7" coveredstatements="7" conditionals="3" coveredconditionals="3" methods="2" coveredmethods="2"/>
+      <file name="index.tsx" path="D:\estadao-tech-challenge\frontend\src\components\Header\Menu\index.tsx">
+        <metrics statements="3" coveredstatements="3" conditionals="3" coveredconditionals="3" methods="2" coveredmethods="2"/>
+        <line num="10" count="4" type="stmt"/>
+        <line num="11" count="5" type="stmt"/>
+        <line num="17" count="3" type="stmt"/>
+      </file>
+      <file name="interface.tsx" path="D:\estadao-tech-challenge\frontend\src\components\Header\Menu\interface.tsx">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="styled.tsx" path="D:\estadao-tech-challenge\frontend\src\components\Header\Menu\styled.tsx">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="4" count="4" type="stmt"/>
+        <line num="6" count="4" type="stmt"/>
+        <line num="17" count="4" type="stmt"/>
+        <line num="48" count="4" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.Header.SearchBar">
+      <metrics statements="13" coveredstatements="13" conditionals="4" coveredconditionals="3" methods="3" coveredmethods="3"/>
+      <file name="index.tsx" path="D:\estadao-tech-challenge\frontend\src\components\Header\SearchBar\index.tsx">
+        <metrics statements="10" coveredstatements="10" conditionals="4" coveredconditionals="3" methods="3" coveredmethods="3"/>
+        <line num="9" count="5" type="stmt"/>
+        <line num="10" count="13" type="stmt"/>
+        <line num="11" count="13" type="stmt"/>
+        <line num="13" count="13" type="stmt"/>
+        <line num="14" count="3" type="stmt"/>
+        <line num="15" count="3" type="cond" truecount="1" falsecount="1"/>
+        <line num="18" count="13" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="23" count="13" type="stmt"/>
+      </file>
+      <file name="styled.tsx" path="D:\estadao-tech-challenge\frontend\src\components\Header\SearchBar\styled.tsx">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="16" count="5" type="stmt"/>
+        <line num="24" count="5" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.Modal">
+      <metrics statements="10" coveredstatements="10" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+      <file name="index.tsx" path="D:\estadao-tech-challenge\frontend\src\components\Modal\index.tsx">
+        <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+        <line num="13" count="5" type="stmt"/>
+        <line num="20" count="15" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+      </file>
+      <file name="interface.tsx" path="D:\estadao-tech-challenge\frontend\src\components\Modal\interface.tsx">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="styled.tsx" path="D:\estadao-tech-challenge\frontend\src\components\Modal\styled.tsx">
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="16" count="5" type="stmt"/>
+        <line num="26" count="5" type="stmt"/>
+        <line num="34" count="5" type="stmt"/>
+        <line num="39" count="5" type="stmt"/>
+        <line num="43" count="5" type="stmt"/>
+        <line num="48" count="5" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.Post">
+      <metrics statements="22" coveredstatements="20" conditionals="11" coveredconditionals="9" methods="6" coveredmethods="5"/>
+      <file name="index.tsx" path="D:\estadao-tech-challenge\frontend\src\components\Post\index.tsx">
+        <metrics statements="15" coveredstatements="13" conditionals="7" coveredconditionals="5" methods="4" coveredmethods="3"/>
+        <line num="21" count="4" type="stmt"/>
+        <line num="25" count="12" type="stmt"/>
+        <line num="27" count="12" type="stmt"/>
+        <line num="28" count="11" type="stmt"/>
+        <line num="29" count="11" type="cond" truecount="1" falsecount="1"/>
+        <line num="30" count="11" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="36" count="12" type="stmt"/>
+        <line num="37" count="1" type="stmt"/>
+        <line num="39" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="40" count="1" type="stmt"/>
+        <line num="42" count="1" type="stmt"/>
+        <line num="46" count="1" type="stmt"/>
+        <line num="50" count="12" type="stmt"/>
+        <line num="89" count="0" type="stmt"/>
+      </file>
+      <file name="interface.tsx" path="D:\estadao-tech-challenge\frontend\src\components\Post\interface.tsx">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="styled.tsx" path="D:\estadao-tech-challenge\frontend\src\components\Post\styled.tsx">
+        <metrics statements="7" coveredstatements="7" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
+        <line num="5" count="4" type="stmt"/>
+        <line num="11" count="4" type="stmt"/>
+        <line num="19" count="11" type="cond" truecount="2" falsecount="0"/>
+        <line num="25" count="4" type="stmt"/>
+        <line num="31" count="4" type="stmt"/>
+        <line num="35" count="11" type="cond" truecount="2" falsecount="0"/>
+        <line num="43" count="4" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.Post.PostCategory">
+      <metrics statements="5" coveredstatements="5" conditionals="3" coveredconditionals="3" methods="2" coveredmethods="2"/>
+      <file name="index.tsx" path="D:\estadao-tech-challenge\frontend\src\components\Post\PostCategory\index.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <line num="7" count="5" type="stmt"/>
+        <line num="13" count="15" type="stmt"/>
+      </file>
+      <file name="interface.tsx" path="D:\estadao-tech-challenge\frontend\src\components\Post\PostCategory\interface.tsx">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="styled.tsx" path="D:\estadao-tech-challenge\frontend\src\components\Post\PostCategory\styled.tsx">
+        <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="8" count="15" type="cond" truecount="2" falsecount="0"/>
+        <line num="16" count="5" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.Post.PostMeta">
+      <metrics statements="5" coveredstatements="5" conditionals="10" coveredconditionals="10" methods="1" coveredmethods="1"/>
+      <file name="index.tsx" path="D:\estadao-tech-challenge\frontend\src\components\Post\PostMeta\index.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="10" coveredconditionals="10" methods="1" coveredmethods="1"/>
+        <line num="8" count="5" type="stmt"/>
+        <line num="15" count="14" type="stmt"/>
+      </file>
+      <file name="interface.tsx" path="D:\estadao-tech-challenge\frontend\src\components\Post\PostMeta\interface.tsx">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="styled.tsx" path="D:\estadao-tech-challenge\frontend\src\components\Post\PostMeta\styled.tsx">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="7" count="5" type="stmt"/>
+        <line num="25" count="5" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.Post.PostTitle">
+      <metrics statements="10" coveredstatements="10" conditionals="6" coveredconditionals="6" methods="4" coveredmethods="4"/>
+      <file name="index.tsx" path="D:\estadao-tech-challenge\frontend\src\components\Post\PostTitle\index.tsx">
+        <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+        <line num="7" count="5" type="stmt"/>
+        <line num="12" count="15" type="stmt"/>
+        <line num="13" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="18" count="15" type="stmt"/>
+      </file>
+      <file name="interface.tsx" path="D:\estadao-tech-challenge\frontend\src\components\Post\PostTitle\interface.tsx">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="styled.tsx" path="D:\estadao-tech-challenge\frontend\src\components\Post\PostTitle\styled.tsx">
+        <metrics statements="5" coveredstatements="5" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
+        <line num="6" count="5" type="stmt"/>
+        <line num="11" count="5" type="stmt"/>
+        <line num="12" count="15" type="cond" truecount="2" falsecount="0"/>
+        <line num="16" count="5" type="stmt"/>
+        <line num="35" count="15" type="cond" truecount="2" falsecount="0"/>
+      </file>
+    </package>
+    <package name="src.components.ResourceLinks">
+      <metrics statements="5" coveredstatements="5" conditionals="5" coveredconditionals="5" methods="2" coveredmethods="2"/>
+      <file name="index.tsx" path="D:\estadao-tech-challenge\frontend\src\components\ResourceLinks\index.tsx">
+        <metrics statements="3" coveredstatements="3" conditionals="5" coveredconditionals="5" methods="2" coveredmethods="2"/>
+        <line num="8" count="5" type="stmt"/>
+        <line num="9" count="4" type="stmt"/>
+        <line num="15" count="3" type="stmt"/>
+      </file>
+      <file name="interface.tsx" path="D:\estadao-tech-challenge\frontend\src\components\ResourceLinks\interface.tsx">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="styled.tsx" path="D:\estadao-tech-challenge\frontend\src\components\ResourceLinks\styled.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="17" count="5" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.SectionGrid">
+      <metrics statements="16" coveredstatements="16" conditionals="12" coveredconditionals="11" methods="7" coveredmethods="7"/>
+      <file name="index.tsx" path="D:\estadao-tech-challenge\frontend\src\components\SectionGrid\index.tsx">
+        <metrics statements="15" coveredstatements="15" conditionals="12" coveredconditionals="11" methods="7" coveredmethods="7"/>
+        <line num="10" count="4" type="stmt"/>
+        <line num="11" count="5" type="stmt"/>
+        <line num="12" count="5" type="stmt"/>
+        <line num="14" count="8" type="cond" truecount="2" falsecount="0"/>
+        <line num="16" count="5" type="stmt"/>
+        <line num="17" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="18" count="2" type="stmt"/>
+        <line num="20" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="21" count="2" type="stmt"/>
+        <line num="23" count="2" type="stmt"/>
+        <line num="24" count="6" type="stmt"/>
+        <line num="26" count="2" type="stmt"/>
+        <line num="31" count="5" type="stmt"/>
+        <line num="44" count="2" type="stmt"/>
+        <line num="51" count="6" type="stmt"/>
+      </file>
+      <file name="interface.tsx" path="D:\estadao-tech-challenge\frontend\src\components\SectionGrid\interface.tsx">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="styled.tsx" path="D:\estadao-tech-challenge\frontend\src\components\SectionGrid\styled.tsx">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="3" count="4" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.SocialMedia">
+      <metrics statements="5" coveredstatements="5" conditionals="3" coveredconditionals="3" methods="2" coveredmethods="2"/>
+      <file name="index.tsx" path="D:\estadao-tech-challenge\frontend\src\components\SocialMedia\index.tsx">
+        <metrics statements="3" coveredstatements="3" conditionals="3" coveredconditionals="3" methods="2" coveredmethods="2"/>
+        <line num="7" count="5" type="stmt"/>
+        <line num="8" count="4" type="stmt"/>
+        <line num="13" count="3" type="stmt"/>
+      </file>
+      <file name="interface.tsx" path="D:\estadao-tech-challenge\frontend\src\components\SocialMedia\interface.tsx">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="styled.tsx" path="D:\estadao-tech-challenge\frontend\src\components\SocialMedia\styled.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="14" count="5" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.Spinner">
+      <metrics statements="8" coveredstatements="8" conditionals="6" coveredconditionals="6" methods="4" coveredmethods="4"/>
+      <file name="index.tsx" path="D:\estadao-tech-challenge\frontend\src\components\Spinner\index.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+      </file>
+      <file name="interface.tsx" path="D:\estadao-tech-challenge\frontend\src\components\Spinner\interface.tsx">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="styled.tsx" path="D:\estadao-tech-challenge\frontend\src\components\Spinner\styled.tsx">
+        <metrics statements="6" coveredstatements="6" conditionals="6" coveredconditionals="6" methods="3" coveredmethods="3"/>
+        <line num="4" count="5" type="stmt"/>
+        <line num="9" count="5" type="stmt"/>
+        <line num="17" count="5" type="stmt"/>
+        <line num="19" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="21" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="22" count="3" type="cond" truecount="2" falsecount="0"/>
+      </file>
+    </package>
+    <package name="src.components.Wrapper">
+      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="index.tsx" path="D:\estadao-tech-challenge\frontend\src\components\Wrapper\index.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="6" count="5" type="stmt"/>
+        <line num="7" count="9" type="stmt"/>
+      </file>
+      <file name="interface.tsx" path="D:\estadao-tech-challenge\frontend\src\components\Wrapper\interface.tsx">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="styled.tsx" path="D:\estadao-tech-challenge\frontend\src\components\Wrapper\styled.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="4" count="5" type="stmt"/>
+        <line num="6" count="5" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.pages">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="index.tsx" path="D:\estadao-tech-challenge\frontend\src\pages\index.tsx">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="src.pages.Admin">
+      <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="index.tsx" path="D:\estadao-tech-challenge\frontend\src\pages\Admin\index.tsx">
+        <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.pages.Authors">
+      <metrics statements="17" coveredstatements="0" conditionals="7" coveredconditionals="0" methods="3" coveredmethods="0"/>
+      <file name="index.tsx" path="D:\estadao-tech-challenge\frontend\src\pages\Authors\index.tsx">
+        <metrics statements="17" coveredstatements="0" conditionals="7" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="23" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="42" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.pages.Categories">
+      <metrics statements="17" coveredstatements="0" conditionals="7" coveredconditionals="0" methods="3" coveredmethods="0"/>
+      <file name="index.tsx" path="D:\estadao-tech-challenge\frontend\src\pages\Categories\index.tsx">
+        <metrics statements="17" coveredstatements="0" conditionals="7" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="23" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="41" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.pages.Home">
+      <metrics statements="14" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
+      <file name="index.tsx" path="D:\estadao-tech-challenge\frontend\src\pages\Home\index.tsx">
+        <metrics statements="14" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.pages.News">
+      <metrics statements="14" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="4" coveredmethods="0"/>
+      <file name="index.tsx" path="D:\estadao-tech-challenge\frontend\src\pages\News\index.tsx">
+        <metrics statements="13" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="32" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+      </file>
+      <file name="styled.tsx" path="D:\estadao-tech-challenge\frontend\src\pages\News\styled.tsx">
+        <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="3" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.redux.news">
+      <metrics statements="8" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <file name="interface.tsx" path="D:\estadao-tech-challenge\frontend\src\redux\news\interface.tsx">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="slice.tsx" path="D:\estadao-tech-challenge\frontend\src\redux\news\slice.tsx">
+        <metrics statements="6" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+      </file>
+      <file name="store.tsx" path="D:\estadao-tech-challenge\frontend\src\redux\news\store.tsx">
+        <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.services">
+      <metrics statements="105" coveredstatements="15" conditionals="42" coveredconditionals="0" methods="7" coveredmethods="0"/>
+      <file name="api.tsx" path="D:\estadao-tech-challenge\frontend\src\services\api.tsx">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="3" count="2" type="stmt"/>
+      </file>
+      <file name="index.tsx" path="D:\estadao-tech-challenge\frontend\src\services\index.tsx">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="interface.tsx" path="D:\estadao-tech-challenge\frontend\src\services\interface.tsx">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="menuService.tsx" path="D:\estadao-tech-challenge\frontend\src\services\menuService.tsx">
+        <metrics statements="15" coveredstatements="2" conditionals="6" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="19" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="21" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="23" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+      </file>
+      <file name="newsAuthorService.tsx" path="D:\estadao-tech-challenge\frontend\src\services\newsAuthorService.tsx">
+        <metrics statements="15" coveredstatements="2" conditionals="6" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="19" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="21" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="23" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+      </file>
+      <file name="newsCategoryService.tsx" path="D:\estadao-tech-challenge\frontend\src\services\newsCategoryService.tsx">
+        <metrics statements="15" coveredstatements="2" conditionals="6" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="19" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="21" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="23" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+      </file>
+      <file name="newsMetadataService.tsx" path="D:\estadao-tech-challenge\frontend\src\services\newsMetadataService.tsx">
+        <metrics statements="14" coveredstatements="2" conditionals="6" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="16" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="18" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+      </file>
+      <file name="newsService.tsx" path="D:\estadao-tech-challenge\frontend\src\services\newsService.tsx">
+        <metrics statements="15" coveredstatements="2" conditionals="6" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="19" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="21" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="23" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+      </file>
+      <file name="resourceLinkService.tsx" path="D:\estadao-tech-challenge\frontend\src\services\resourceLinkService.tsx">
+        <metrics statements="15" coveredstatements="2" conditionals="6" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="19" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="21" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="23" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+      </file>
+      <file name="socialmediaService.tsx" path="D:\estadao-tech-challenge\frontend\src\services\socialmediaService.tsx">
+        <metrics statements="15" coveredstatements="2" conditionals="6" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="19" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="21" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="23" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.utils">
+      <metrics statements="14" coveredstatements="11" conditionals="4" coveredconditionals="1" methods="5" coveredmethods="4"/>
+      <file name="index.tsx" path="D:\estadao-tech-challenge\frontend\src\utils\index.tsx">
+        <metrics statements="14" coveredstatements="11" conditionals="4" coveredconditionals="1" methods="5" coveredmethods="4"/>
+        <line num="5" count="7" type="stmt"/>
+        <line num="14" count="7" type="stmt"/>
+        <line num="15" count="23" type="stmt"/>
+        <line num="16" count="138" type="stmt"/>
+        <line num="21" count="138" type="stmt"/>
+        <line num="24" count="23" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="29" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="32" count="7" type="stmt"/>
+        <line num="33" count="13" type="cond" truecount="1" falsecount="1"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="37" count="13" type="stmt"/>
+        <line num="38" count="13" type="stmt"/>
+        <line num="44" count="13" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>
