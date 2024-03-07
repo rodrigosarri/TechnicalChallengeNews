@@ -9,8 +9,8 @@ export const PostMeta: FC<PostCategoryProps> = ({
   highlight,
   author,
   date,
-  views,
-  shares,
+  views = 0,
+  shares = 0,
 }) => {
   return (
     <PostMetaContainer>
@@ -22,12 +22,12 @@ export const PostMeta: FC<PostCategoryProps> = ({
         {date && <PostMetaItem>{date}</PostMetaItem>}
         {highlight && (
           <>
-            {views && views > 0 && (
+            {views > 0 && (
               <PostMetaItem>
                 {views} <i data-testid="views" className="fa-solid fa-chart-line"></i>
               </PostMetaItem>
             )}
-            {shares && shares > 0 && (
+            {shares > 0 && (
               <PostMetaItem>
                 {shares} <i data-testid="shares" className="fa-solid fa-share"></i>
               </PostMetaItem>
