@@ -45,6 +45,11 @@ async function main() {
 		process.exit(1);
 	}
 
+	const swaggerUi = require("swagger-ui-express");
+	const swaggerDocument = require("./swagger.json");
+
+	app.use("/api/docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+
 	app.use("/api", MenuRoutes);
 	app.use("/api", NewsAuthorRoutes);
 	app.use("/api", NewsCategoryRoutes);

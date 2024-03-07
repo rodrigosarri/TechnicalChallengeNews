@@ -23,8 +23,8 @@ class NewsController {
 
   public async create(req: Request, res: Response): Promise<Response> {
     try {
-      const { title, description, newsCategoryUuid, newsAuthorUuid, slug } = req.body;
-      const create = await News.create({ title, description, newsCategoryUuid, newsAuthorUuid, slug });
+      const { title, description, image, newsCategoryUuid, newsAuthorUuid, highlight, slug } = req.body;
+      const create = await News.create({ title, description, image, newsCategoryUuid, newsAuthorUuid, highlight, slug });
 
       return res.status(201).json(create);
     } catch (error) {
@@ -160,7 +160,7 @@ class NewsController {
   public async update(req: Request, res: Response): Promise<Response> {
     try {
       const { uuid } = req.params;
-      const { title, description, newsCategoryUuid, newsAuthorUuid, slug } = req.body;
+      const { title, description, image, newsCategoryUuid, newsAuthorUuid, highlight, slug } = req.body;
 
       const findByPk = await News.findByPk(uuid);
 
@@ -172,7 +172,7 @@ class NewsController {
         });
       }
 
-      await findByPk.update({ title, description, newsCategoryUuid, newsAuthorUuid, slug });
+      await findByPk.update({ title, description, image, newsCategoryUuid, newsAuthorUuid, highlight, slug });
       return res.status(200).json(findByPk);
 
     } catch (error) {

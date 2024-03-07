@@ -1,0 +1,1740 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "NewsFlow API",
+    "description": "API para gerenciar fluxos de notícias, incluindo itens de menu, autores, categorias, metadados, conteúdo de notícias, links de recursos e links de mídias sociais",
+    "version": "1.0.0"
+  },
+  "host": "localhost:3001",
+  "basePath": "/api",
+  "schemes": ["http"],
+  "paths": {
+    "/menu": {
+      "get": {
+        "summary": "Retornar o menu",
+        "responses": {
+          "200": {
+            "description": "Exemplo de retorno do menu",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "uuid": {
+                    "type": "string"
+                  },
+                  "label": {
+                    "type": "string"
+                  },
+                  "url": {
+                    "type": "string"
+                  },
+                  "createdAt": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "updatedAt": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "deletedAt": {
+                    "type": "string",
+                    "format": "date-time"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Crie um novo menu",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Campos do menu",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "label": {
+                  "type": "string",
+                  "description": "Título do menu"
+                },
+                "url": {
+                  "type": "string",
+                  "description": "URL do menu"
+                }
+              },
+              "required": ["label", "url"]
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Menu criado com sucesso",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "uuid": {
+                  "type": "string"
+                },
+                "label": {
+                  "type": "string"
+                },
+                "url": {
+                  "type": "string"
+                },
+                "updatedAt": {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "createdAt": {
+                  "type": "string",
+                  "format": "date-time"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Erro ao salvar o menu",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "error": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "error": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "field": {
+                            "type": "string"
+                          },
+                          "errors": {
+                            "type": "array",
+                            "items": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/menu/{uuid}": {
+      "put": {
+        "summary": "Atualiza um menu",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "uuid",
+            "required": true,
+            "type": "string",
+            "description": "UUID"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Campos do menu",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "label": {
+                  "type": "string",
+                  "description": "Título do menu"
+                },
+                "url": {
+                  "type": "string",
+                  "description": "URL do menu"
+                }
+              },
+              "required": ["label", "url"]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Menu atualizado com sucesso",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "uuid": {
+                  "type": "string"
+                },
+                "label": {
+                  "type": "string"
+                },
+                "url": {
+                  "type": "string"
+                },
+                "updatedAt": {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "createdAt": {
+                  "type": "string",
+                  "format": "date-time"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Erro ao salvar o menu",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "error": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "error": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "field": {
+                            "type": "string"
+                          },
+                          "errors": {
+                            "type": "array",
+                            "items": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "Deleta um menu",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "uuid",
+            "required": true,
+            "type": "string",
+            "description": "UUID"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Menu deletado com sucesso",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "message": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/news-author": {
+      "get": {
+        "summary": "Retorn os autores",
+        "responses": {
+          "200": {
+            "description": "Exemplo de retorno dos autores",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "uuid": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "url": {
+                    "type": "string"
+                  },
+                  "createdAt": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "updatedAt": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "deletedAt": {
+                    "type": "string",
+                    "format": "date-time"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Adiciona um novo autor",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Campos do autor",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "description": "Nome do autor"
+                },
+                "url": {
+                  "type": "string",
+                  "description": "URL do autor"
+                }
+              },
+              "required": ["name", "url"]
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Autor criado com sucesso",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "uuid": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "url": {
+                  "type": "string"
+                },
+                "updatedAt": {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "createdAt": {
+                  "type": "string",
+                  "format": "date-time"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Erro ao salvar o autor",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "error": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "error": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "field": {
+                            "type": "string"
+                          },
+                          "errors": {
+                            "type": "array",
+                            "items": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/news-author/{uuid}": {
+      "put": {
+        "summary": "Atualiza um autor",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "uuid",
+            "required": true,
+            "type": "string",
+            "description": "UUID"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Campos do autor",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "description": "Nome do autor"
+                },
+                "url": {
+                  "type": "string",
+                  "description": "URL do autor"
+                }
+              },
+              "required": ["name", "url"]
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Autor atualizado com sucesso",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "uuid": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "url": {
+                  "type": "string"
+                },
+                "updatedAt": {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "createdAt": {
+                  "type": "string",
+                  "format": "date-time"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Erro ao salvar o autor",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "error": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "error": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "field": {
+                            "type": "string"
+                          },
+                          "errors": {
+                            "type": "array",
+                            "items": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "Deleta um autor",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "uuid",
+            "required": true,
+            "type": "string",
+            "description": "UUID"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Autor deletado com sucesso",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "message": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/news-category": {
+      "get": {
+        "summary": "Retorna categorias da notícia",
+        "responses": {
+          "200": {
+            "description": "Exemplo de retorno das categorias",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "uuid": {
+                    "type": "string"
+                  },
+                  "label": {
+                    "type": "string"
+                  },
+                  "url": {
+                    "type": "string"
+                  },
+                  "color": {
+                    "type": "string"
+                  },
+                  "createdAt": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "updatedAt": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "deletedAt": {
+                    "type": "string",
+                    "format": "date-time"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Adicionar uma nova categoria da notícia",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Campos do categoria",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "label": {
+                  "type": "string",
+                  "description": "Título da categoria"
+                },
+                "url": {
+                  "type": "string",
+                  "description": "URL da categoria"
+                },
+                "color": {
+                  "type": "string",
+                  "description": "Cor da categoria"
+                }
+              },
+              "required": ["label", "url"]
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Categoria da notícia criada com sucesso",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "uuid": {
+                  "type": "string"
+                },
+                "label": {
+                  "type": "string"
+                },
+                "url": {
+                  "type": "string"
+                },
+                "updatedAt": {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "createdAt": {
+                  "type": "string",
+                  "format": "date-time"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Erro ao salvar a categoria",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "error": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "error": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "field": {
+                            "type": "string"
+                          },
+                          "errors": {
+                            "type": "array",
+                            "items": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/news-category/{uuid}": {
+      "put": {
+        "summary": "Atualiza uma categoria da notícia",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "uuid",
+            "required": true,
+            "type": "string",
+            "description": "UUID"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Campos do categoria",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "label": {
+                  "type": "string",
+                  "description": "Título da categoria"
+                },
+                "url": {
+                  "type": "string",
+                  "description": "URL da categoria"
+                },
+                "color": {
+                  "type": "string",
+                  "description": "Cor da categoria"
+                }
+              },
+              "required": ["label", "url"]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Categoria da notícia atualizada com sucesso",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "uuid": {
+                  "type": "string"
+                },
+                "label": {
+                  "type": "string"
+                },
+                "url": {
+                  "type": "string"
+                },
+                "updatedAt": {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "createdAt": {
+                  "type": "string",
+                  "format": "date-time"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Erro ao salvar a categoria",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "error": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "error": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "field": {
+                            "type": "string"
+                          },
+                          "errors": {
+                            "type": "array",
+                            "items": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete uma categoria da notícia",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "uuid",
+            "required": true,
+            "type": "string",
+            "description": "UUID"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Categoria deletada com sucesso",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "message": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/news-metadata": {
+      "get": {
+        "summary": "Retorna os metadados da notícia",
+        "responses": {
+          "200": {
+            "description": "Exemplo de retorno dos metadados da categoria",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "uuid": {
+                    "type": "string"
+                  },
+                  "newsUuid": {
+                    "type": "string"
+                  },
+                  "views": {
+                    "type": "number"
+                  },
+                  "shares": {
+                    "type": "number"
+                  },
+                  "createdAt": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "updatedAt": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "deletedAt": {
+                    "type": "string",
+                    "format": "date-time"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/news-metadata/{uuid}": {
+      "delete": {
+        "summary": "Deleta metadados da notícia",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "uuid",
+            "required": true,
+            "type": "string",
+            "description": "UUID"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Metadados deletado com sucesso",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "message": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/news-metadata/increment-view": {
+      "post": {
+        "summary": "Incrementa em 1 as visualizações da notícia",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "UUID da notícia é obrigatório",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "newsUuid": {
+                  "type": "string",
+                  "description": "UUID da notícia"
+                }
+              },
+              "required": ["newsUuid"]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Incrementado uma visualização",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "newsUuid": {
+                  "type": "string"
+                },
+                "label": {
+                  "type": "string"
+                },
+                "url": {
+                  "type": "string"
+                },
+                "updatedAt": {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "createdAt": {
+                  "type": "string",
+                  "format": "date-time"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Erro ao salvar a categoria",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "error": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "error": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "field": {
+                            "type": "string"
+                          },
+                          "errors": {
+                            "type": "array",
+                            "items": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/news-metadata/increment-share": {
+      "post": {
+        "summary": "Incrementa em 1 os compartilhamentos da notícia",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "UUID da notícia é obrigatório",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "newsUuid": {
+                  "type": "string",
+                  "description": "UUID da notícia"
+                }
+              },
+              "required": ["newsUuid"]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Incrementado um compartilhamento",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "uuid": {
+                  "type": "string"
+                },
+                "label": {
+                  "type": "string"
+                },
+                "url": {
+                  "type": "string"
+                },
+                "updatedAt": {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "createdAt": {
+                  "type": "string",
+                  "format": "date-time"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Erro ao salvar a categoria",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "error": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "error": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "field": {
+                            "type": "string"
+                          },
+                          "errors": {
+                            "type": "array",
+                            "items": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/news": {
+      "get": {
+        "summary": "Get news items",
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "uuid": {"type": "string"},
+                  "title": {"type": "string"},
+                  "description": {"type": "string"},
+                  "image": {"type": "string", "format": "uri"},
+                  "newsCategoryUuid": {"type": "string"},
+                  "newsAuthorUuid": {"type": "string"},
+                  "highlight": {"type": "boolean"},
+                  "slug": {"type": "string"},
+                  "createdAt": {"type": "string", "format": "date-time"},
+                  "updatedAt": {"type": "string", "format": "date-time"},
+                  "deletedAt": {"type": "string", "format": "date-time"},
+                  "newsCategory": {
+                    "type": "object",
+                    "properties": {
+                      "uuid": {"type": "string"},
+                      "label": {"type": "string"},
+                      "url": {"type": "string"},
+                      "color": {"type": "string"},
+                      "createdAt": {"type": "string", "format": "date-time"},
+                      "updatedAt": {"type": "string", "format": "date-time"},
+                      "deletedAt": {"type": "string", "format": "date-time"}
+                    }
+                  },
+                  "newsAuthor": {
+                    "type": "object",
+                    "properties": {
+                      "uuid": {"type": "string"},
+                      "name": {"type": "string"},
+                      "url": {"type": "string"},
+                      "createdAt": {"type": "string", "format": "date-time"},
+                      "updatedAt": {"type": "string", "format": "date-time"},
+                      "deletedAt": {"type": "string", "format": "date-time"}
+                    }
+                  },
+                  "newsMetadata": {
+                    "type": "object",
+                    "properties": {
+                      "uuid": {"type": "string"},
+                      "newsUuid": {"type": "string"},
+                      "views": {"type": "integer"},
+                      "shares": {"type": "integer"},
+                      "createdAt": {"type": "string", "format": "date-time"},
+                      "updatedAt": {"type": "string", "format": "date-time"},
+                      "deletedAt": {"type": "string", "format": "date-time"}
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Cria uma nova notícia",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Campos da notícia",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "title": {"type": "string"},
+                "description": {"type": "string"},
+                "image": {"type": "string", "format": "uri"},
+                "newsCategoryUuid": {"type": "string"},
+                "newsAuthorUuid": {"type": "string"},
+                "highlight": {"type": "boolean"},
+                "slug": {"type": "string"}
+              },
+              "required": ["title", "description", "image", "newsCategoryUuid", "newsAuthorUuid", "highlight", "slug"]
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Notícia criada com sucesso",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "uuid": {
+                  "type": "string"
+                },
+                "label": {
+                  "type": "string"
+                },
+                "url": {
+                  "type": "string"
+                },
+                "updatedAt": {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "createdAt": {
+                  "type": "string",
+                  "format": "date-time"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Erro ao salvar o menu",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "error": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "error": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "field": {
+                            "type": "string"
+                          },
+                          "errors": {
+                            "type": "array",
+                            "items": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/news/{uuid}": {
+      "put": {
+        "summary": "Atualiza uma nova notícia",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "uuid",
+            "required": true,
+            "type": "string",
+            "description": "UUID"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Campos da notícia",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "title": {"type": "string"},
+                "description": {"type": "string"},
+                "image": {"type": "string", "format": "uri"},
+                "newsCategoryUuid": {"type": "string"},
+                "newsAuthorUuid": {"type": "string"},
+                "highlight": {"type": "boolean"},
+                "slug": {"type": "string"}
+              },
+              "required": ["title", "description", "image", "newsCategoryUuid", "newsAuthorUuid", "highlight", "slug"]
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Notícia criada com sucesso",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "uuid": {
+                  "type": "string"
+                },
+                "label": {
+                  "type": "string"
+                },
+                "url": {
+                  "type": "string"
+                },
+                "updatedAt": {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "createdAt": {
+                  "type": "string",
+                  "format": "date-time"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Erro ao salvar o menu",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "error": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "error": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "field": {
+                            "type": "string"
+                          },
+                          "errors": {
+                            "type": "array",
+                            "items": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "Deleta uma notícia",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "uuid",
+            "required": true,
+            "type": "string",
+            "description": "UUID"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Notícia deletada com sucesso",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "message": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/resource-link": {
+      "get": {
+        "summary": "Retorna os links de 'recursos'",
+        "responses": {
+          "200": {
+            "description": "Exemplo de retorno dos links",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "uuid": {
+                    "type": "string"
+                  },
+                  "label": {
+                    "type": "string"
+                  },
+                  "url": {
+                    "type": "string"
+                  },
+                  "createdAt": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "updatedAt": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "deletedAt": {
+                    "type": "string",
+                    "format": "date-time"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Crie um novo link",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Campos do link",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "label": {
+                  "type": "string",
+                  "description": "Título do link"
+                },
+                "url": {
+                  "type": "string",
+                  "description": "URL do link"
+                }
+              },
+              "required": ["label", "url"]
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Menu criado com sucesso",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "uuid": {
+                  "type": "string"
+                },
+                "label": {
+                  "type": "string"
+                },
+                "url": {
+                  "type": "string"
+                },
+                "updatedAt": {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "createdAt": {
+                  "type": "string",
+                  "format": "date-time"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Erro ao salvar o menu",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "error": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "error": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "field": {
+                            "type": "string"
+                          },
+                          "errors": {
+                            "type": "array",
+                            "items": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/resource-link/{uuid}": {
+      "put": {
+        "summary": "Atualiza um link",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "uuid",
+            "required": true,
+            "type": "string",
+            "description": "UUID"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Campos do link",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "label": {
+                  "type": "string",
+                  "description": "Título do link"
+                },
+                "url": {
+                  "type": "string",
+                  "description": "URL do link"
+                }
+              },
+              "required": ["label", "url"]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Link atualizado com sucesso",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "uuid": {
+                  "type": "string"
+                },
+                "label": {
+                  "type": "string"
+                },
+                "url": {
+                  "type": "string"
+                },
+                "updatedAt": {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "createdAt": {
+                  "type": "string",
+                  "format": "date-time"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Erro ao salvar o link",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "error": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "error": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "field": {
+                            "type": "string"
+                          },
+                          "errors": {
+                            "type": "array",
+                            "items": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "Deleta um link",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "uuid",
+            "required": true,
+            "type": "string",
+            "description": "UUID"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Link deletado com sucesso",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "message": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/social-media": {
+      "get": {
+        "summary": "Retorna as redes sociais",
+        "responses": {
+          "200": {
+            "description": "Exemplo de retorno das redes sociais",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "uuid": {
+                    "type": "string"
+                  },
+                  "icon": {
+                    "type": "string"
+                  },
+                  "url": {
+                    "type": "string"
+                  },
+                  "createdAt": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "updatedAt": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "deletedAt": {
+                    "type": "string",
+                    "format": "date-time"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Cria um novo link de rede social",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Campos das redes sociais",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "icon": {
+                  "type": "string",
+                  "description": "Ícone da rede social"
+                },
+                "url": {
+                  "type": "string",
+                  "description": "URL do link"
+                }
+              },
+              "required": ["icon", "url"]
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Novo link de rede social criado com sucesso",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "uuid": {
+                  "type": "string"
+                },
+                "icon": {
+                  "type": "string"
+                },
+                "url": {
+                  "type": "string"
+                },
+                "updatedAt": {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "createdAt": {
+                  "type": "string",
+                  "format": "date-time"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Erro ao salvar o menu",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "error": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "error": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "field": {
+                            "type": "string"
+                          },
+                          "errors": {
+                            "type": "array",
+                            "items": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/social-media/{uuid}": {
+      "put": {
+        "summary": "Atualiza um link de rede social",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "uuid",
+            "required": true,
+            "type": "string",
+            "description": "UUID"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Campos das redes sociais",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "icon": {
+                  "type": "string",
+                  "description": "Ícone da rede social"
+                },
+                "url": {
+                  "type": "string",
+                  "description": "URL do link"
+                }
+              },
+              "required": ["icon", "url"]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Link de rede social atualizado com sucesso",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "uuid": {
+                  "type": "string"
+                },
+                "icon": {
+                  "type": "string"
+                },
+                "url": {
+                  "type": "string"
+                },
+                "updatedAt": {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "createdAt": {
+                  "type": "string",
+                  "format": "date-time"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Erro ao salvar o menu",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "error": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "error": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "field": {
+                            "type": "string"
+                          },
+                          "errors": {
+                            "type": "array",
+                            "items": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "Deleta um link de rede social",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "uuid",
+            "required": true,
+            "type": "string",
+            "description": "UUID"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Link de rede social deletado com sucesso",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "message": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -78,7 +78,7 @@ export const up = async() => {
         image: faker.image.urlPicsumPhotos({ width: 1200, height: 1200 }),
         newsCategoryUuid: categoryUuid.uuid,
         newsAuthorUuid: authorUuid.uuid,
-        highlight: true,
+        highlight: faker.datatype.boolean({ probability: 0.5 }),
         slug: textToSlug(title),
         createdAt: faker.date.anytime()
       });
