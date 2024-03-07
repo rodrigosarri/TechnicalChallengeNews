@@ -49,5 +49,10 @@ Gere o build do projeto com o comando:
 	-   **Linux**:
 	 `npm run homologLinux`
 
+## Swagger
+Para otimizar o processo de execução e monitoramento dos endpoints deste projeto, incorporamos o Swagger. Esta ferramenta disponibiliza detalhes sobre cada endpoint, os quais podem ser facilmente acessados após a inicialização do projeto. Para visualizá-los, navegue até
+http://localhost:3001/api/docs/#/ se o projeto for executado em modo de desenvolvedor sem Docker,
+ou até http://localhost/api/docs/#/ caso esteja utilizando Docker para a execução.
+
 ## Dados simulados
 Para facilitar a visualização e o teste do projeto, empregou-se a biblioteca Faker (https://fakerjs.dev/) para a geração automática de dados fictícios em notícias. É crucial remover este componente antes de migrar o projeto para o ambiente de produção, a fim de assegurar a integridade e a relevância dos dados apresentados.
