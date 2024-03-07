@@ -7,6 +7,9 @@ import { waitForDatabase } from "./utils/wait-for-db";
 import { initializeDatabase } from "./models";
 import { umzug } from "./database";
 
+import swaggerUi from "swagger-ui-express";
+import swaggerDocument from "./json/swagger.json";
+
 import {
   MenuRoutes,
   NewsAuthorRoutes,
@@ -45,8 +48,7 @@ async function main() {
 		process.exit(1);
 	}
 
-	const swaggerUi = require("swagger-ui-express");
-	const swaggerDocument = require("./swagger.json");
+
 
 	app.use("/api/docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
